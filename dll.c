@@ -14,7 +14,7 @@ NODE *getnode(int value)
     newnode=(NODE *)malloc(sizeof(NODE));
     if(newnode==NULL)
         printf("Memory was not allocated\n");
-	else
+    else
     {
 		newnode->data=value;
 		newnode->Forw =NULL;
@@ -38,7 +38,7 @@ void insert_beg()
 	{
 		newnode->Forw=start;
 		newnode->Back=NULL;
-        start->Back=newnode;
+        	start->Back=newnode;
 		start=newnode;
 	}
 	printf("NODE INSERTED\n");
@@ -57,7 +57,7 @@ void insert_end()
 	}
 	else
 	{	
-        currptr=start;
+        	currptr=start;
 		while(currptr->Forw!=NULL)
 			currptr=currptr->Forw;
 		currptr->Forw=newnode;
@@ -147,29 +147,29 @@ void delete_firstnode()
 void delete_lastnode()
 {
 	if(start==NULL)
-        printf("List Empty, No nodes to delete\n");
-    else if(start->Forw==NULL)
-    {
-        currptr=start;
-        start=NULL;
-        printf("The deleted element is %d\n",currptr->data);
-        free(currptr);
-     }
-    else
-    {
-        currptr=start;
-        while(currptr->Forw!=NULL)
-            currptr=currptr->Forw;
-        (currptr->Back)->Forw=NULL;
-        printf("The deleted element is %d\n",currptr->data);
-        free(currptr);
-    }
+        	printf("List Empty, No nodes to delete\n");
+    	else if(start->Forw==NULL)
+    	{
+        	currptr=start;
+        	start=NULL;
+        	printf("The deleted element is %d\n",currptr->data);
+        	free(currptr);
+     	}
+    	else
+    	{
+        	currptr=start;
+        	while(currptr->Forw!=NULL)
+            	currptr=currptr->Forw;
+        	(currptr->Back)->Forw=NULL;
+        	printf("The deleted element is %d\n",currptr->data);
+        	free(currptr);
+    	}
 }
 void delete_givenPosition()
 { 	
     int i,pos,count=0;
     if(start==NULL)
-		printf("List Empty, No nodes to delete\n");
+	printf("List Empty, No nodes to delete\n");
     else
     {
         printf("Enter the position for the node:\n");
