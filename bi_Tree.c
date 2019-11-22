@@ -61,6 +61,24 @@ void inorder(struct node *tree)
     		inorder(tree->rchild);
   	}
 }
+void preorder(struct node *tree)
+{
+  	if(tree!=NULL)
+  	{
+    		printf("%d\t",tree->data);
+		preorder(tree->lchild);
+    		preorder(tree->rchild);
+  	}
+}
+void postorder(struct node *tree)
+{
+  	if(tree!=NULL)
+  	{
+		postorder(tree->lchild);
+    		postorder(tree->rchild);
+		printf("%d\t",tree->data);
+	}
+} 
 void main()
 {
   	printf("Create the root node\n");
@@ -68,6 +86,10 @@ void main()
   	printf("Enter the data\n");
   	scanf("%d",&root->data);
   	create(root);
-  	printf("The inorder traversal is:\n");
+  	printf("\nThe inorder traversal is: ");
   	inorder(root);
+	printf("\nThe preorder traversal is: ");
+  	preorder(root);
+	printf("\nThe postorder traversal is: ");
+  	postorder(root);
 }
