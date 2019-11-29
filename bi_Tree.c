@@ -7,7 +7,6 @@ struct node
   	struct node *rchild;
 };
 struct node *root=NULL;
-int item;
 int is_lchild(struct node *tree)
 {
   	int ch;
