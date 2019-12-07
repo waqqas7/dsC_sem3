@@ -11,14 +11,9 @@ NODE *newnode, *last=NULL, *currptr;
 NODE *getnode(int value)
 {
 	newnode=(NODE *)malloc(sizeof(NODE));
-	if(newnode==NULL)
-		printf("Memory was not allocated\n");
-	else
-	{
-		newnode->data=value;
-		newnode->link =NULL;
-		return newnode;	
-	}
+	newnode->data=value;
+	newnode->link =NULL;
+	return newnode;	
 }
 void push()
 {
