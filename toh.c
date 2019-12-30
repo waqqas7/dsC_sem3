@@ -1,5 +1,4 @@
 #include<stdio.h>
-int c=0;
 void toh(int n,char source,char tmp,char dest)
 {
 	if(n==1)
